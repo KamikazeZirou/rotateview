@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kamikaze.rotateview">
+    package="com.kamikaze.rotateview.sample">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RotateLayout">
         <activity
-            android:name="com.kamikaze.rotateview.MainActivity"
+            android:name="com.kamikaze.rotateview.sample.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

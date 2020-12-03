@@ -1,2 +1,3 @@
+include ':rotateview'
 include ':app'
-rootProject.name = "RotateLayout"
+rootProject.name = "RotateView"

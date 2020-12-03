@@ -1,9 +1,11 @@
-package com.kamikaze.rotateview
+package com.kamikaze.rotateview.sample
 
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.OrientationEventListener
 import androidx.appcompat.app.AppCompatActivity
+import com.kamikaze.rotateview.RotateImageView
+import com.kamikaze.rotateview.RotateLayout
 
 
 class MainActivity : AppCompatActivity() {
