@@ -21,7 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/rotateLayout2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -32,5 +35,16 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_baseline_flash_on_24" />
     </com.kamikaze.rotatelayout.RotateLayout>
+
+    <com.kamikaze.rotatelayout.RotateImageView
+        android:id="@+id/rotateLayout2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotateLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_baseline_flash_on_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

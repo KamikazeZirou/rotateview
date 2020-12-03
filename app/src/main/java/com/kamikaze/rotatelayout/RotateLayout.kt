@@ -17,7 +17,6 @@ package com.kamikaze.rotatelayout
 
 import android.R
 import android.content.Context
-import android.graphics.Matrix
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
@@ -89,7 +88,7 @@ class RotateLayout(context: Context?, attrs: AttributeSet?) : ViewGroup(context,
     }
 
     // Rotate the view counter-clockwise
-    fun setOrientation(orientation: Int, animation: Boolean) {
+    fun setOrientation(orientation: Int) {
         var orientation = orientation
         orientation %= 360
 
