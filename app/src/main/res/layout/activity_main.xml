@@ -16,7 +16,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.kamikaze.rotatelayout.RotateLayout
+    <com.kamikaze.rotateview.RotateLayout
         android:id="@+id/rotateLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,9 +34,9 @@
             android:layout_height="48dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_baseline_flash_on_24" />
-    </com.kamikaze.rotatelayout.RotateLayout>
+    </com.kamikaze.rotateview.RotateLayout>
 
-    <com.kamikaze.rotatelayout.RotateImageView
+    <com.kamikaze.rotateview.RotateImageView
         android:id="@+id/rotateLayout2"
         android:layout_width="48dp"
         android:layout_height="48dp"

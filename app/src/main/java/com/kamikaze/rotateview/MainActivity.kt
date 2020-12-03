@@ -1,4 +1,4 @@
-package com.kamikaze.rotatelayout
+package com.kamikaze.rotateview
 
 import android.hardware.SensorManager
 import android.os.Bundle

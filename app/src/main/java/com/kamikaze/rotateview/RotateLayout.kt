@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kamikaze.rotatelayout
+package com.kamikaze.rotateview
 
 import android.R
 import android.content.Context
@@ -89,16 +89,9 @@ class RotateLayout(context: Context?, attrs: AttributeSet?) : ViewGroup(context,
 
     // Rotate the view counter-clockwise
     fun setOrientation(orientation: Int) {
-        var orientation = orientation
-        orientation %= 360
-
-        orientation = when (orientation) {
-            in (0..45), in (315..360) -> 0
-            in (45..135) -> 90
-            in (135..225) -> 180
-            in (225..315) -> 270
-            else -> 0
-        }
+        val orientation = orientation
+            .makeSureInRegularRange()
+            .round()
 
         if (this.orientation == orientation) return
         this.orientation = orientation

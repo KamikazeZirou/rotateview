@@ -1,4 +1,4 @@
-package com.kamikaze.rotatelayout
+package com.kamikaze.rotateview
 
 import org.junit.Test
 
