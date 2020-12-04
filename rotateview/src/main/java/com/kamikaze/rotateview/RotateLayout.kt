@@ -15,7 +15,7 @@
  */
 
 /**
- * Changes
+ * Changes from the original file
  *
  * - The original file was changed from Java to Kotlin.
  * - Refactored code
@@ -31,7 +31,7 @@ import android.view.ViewGroup
 
 // A RotateLayout is designed to display a single item and provides the
 // capabilities to rotate the item.
-class RotateLayout(context: Context?, attrs: AttributeSet?) : ViewGroup(context, attrs) {
+class RotateLayout(context: Context?, attrs: AttributeSet?) : ViewGroup(context, attrs), Rotatable {
     var orientation = 0
         private set
     private var child: View? = null
@@ -96,7 +96,7 @@ class RotateLayout(context: Context?, attrs: AttributeSet?) : ViewGroup(context,
     }
 
     // Rotate the view counter-clockwise
-    fun setOrientation(orientation: Int) {
+    override fun setOrientation(orientation: Int) {
         val orientation = orientation
             .makeSureInRegularRange()
             .round()

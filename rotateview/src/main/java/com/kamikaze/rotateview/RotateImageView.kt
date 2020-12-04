@@ -15,7 +15,7 @@
  */
 
 /**
- * Changes
+ * Changes from the original file
  *
  * - The original file was changed from Java to Kotlin.
  * - Refactored code
@@ -38,7 +38,7 @@ import androidx.appcompat.widget.AppCompatImageView
 /**
  * A @{code ImageView} which can rotate it's content.
  */
-class RotateImageView : AppCompatImageView {
+class RotateImageView : AppCompatImageView, Rotatable {
     private var currentDegree = 0 // [0, 359]
     private var startDegree = 0
     private var degree = 0
@@ -55,14 +55,14 @@ class RotateImageView : AppCompatImageView {
     }
 
     // Rotate the view counter-clockwise
-    fun setOrientation(degree: Int) {
+    override fun setOrientation(orientation: Int) {
         // make sure in the range of [0, 359]
-        val degree = degree
+        val orientation = orientation
             .makeSureInRegularRange()
             .round()
 
-        if (degree == this.degree) return
-        this.degree = degree
+        if (orientation == this.degree) return
+        this.degree = orientation
         startDegree = currentDegree
         animationStartTime = AnimationUtils.currentAnimationTimeMillis()
         var diff = this.degree - currentDegree
