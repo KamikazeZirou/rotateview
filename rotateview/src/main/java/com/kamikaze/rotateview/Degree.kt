@@ -1,8 +1,8 @@
 package com.kamikaze.rotateview
 
-fun Int.makeSureInRegularRange(): Int = if (this >= 0) this % 360 else this % 360 + 360
+internal fun Int.makeSureInRegularRange(): Int = if (this >= 0) this % 360 else this % 360 + 360
 
-fun Int.round(): Int = when (this) {
+internal fun Int.round(): Int = when (this) {
     in (0..45), in (316..359) -> 0
     in (46..135) -> 90
     in (136..225) -> 180
