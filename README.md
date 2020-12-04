@@ -28,7 +28,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation("com.github.KamikazeZirou.rotateview:rotateview:0.0.1")
+    implementation("com.github.KamikazeZirou:rotateview:0.0.1")
 }
 ```
 
