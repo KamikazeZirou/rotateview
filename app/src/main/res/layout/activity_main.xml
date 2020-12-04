@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/rotateLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/rotateImageView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
     </com.kamikaze.rotateview.RotateLayout>
 
     <com.kamikaze.rotateview.RotateImageView
-        android:id="@+id/rotateLayout2"
+        android:id="@+id/rotateImageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"

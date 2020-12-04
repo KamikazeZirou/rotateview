@@ -1,6 +1,6 @@
 # rotateview
 
-This is an Andorid library that provides a rotating View.
+This is an Android library that provides a rotating View.
 You can use it when you want to rotate only a part of the View instead of the whole screen.
 
 
@@ -28,7 +28,84 @@ dependencies {
 
 ## Usage
 
+### RotateImageView
+
+RotateImageView is an animated and rotating ImageView.
+
+```
+<com.kamikaze.rotateview.RotateImageView
+    android:id="@+id/rotateImageView"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    app:srcCompat="@drawable/ic_baseline_flash_on_24" />
+```
+
+### RotateLayout
+
+RotateLayout allows the child views to be rotated (currently, animation is not supported).
+
+```
+<com.kamikaze.rotateview.RotateLayout
+    android:id="@+id/rotateLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_flash_on_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash" />
+    </LinearLayout>
+</com.kamikaze.rotateview.RotateLayout>
+```
+
+### Rotate from Activity
+
+```
+class MainActivity : AppCompatActivity() {
+    private val listener: OrientationEventListener by lazy {
+        object: OrientationEventListener(this, SensorManager.SENSOR_DELAY_NORMAL) {
+            override fun onOrientationChanged(orientation: Int) {
+                findViewById<RotateLayout>(R.id.rotateImageView).setOrientation(orientation)
+                findViewById<RotateImageView>(R.id.rotateLayout).setOrientation(orientation)
+            }
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if (listener.canDetectOrientation()) {
+            listener.enable()
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        listener.disable()
+    }
+}
+```
 
 ## License
 
-This software includes the work that is distributed in the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+This library includes the work that is distributed in the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+Specifically, this library was created based on the source code of the AOSP camera app.

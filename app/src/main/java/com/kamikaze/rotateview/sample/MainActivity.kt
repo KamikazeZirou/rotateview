@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         object: OrientationEventListener(this, SensorManager.SENSOR_DELAY_NORMAL) {
             override fun onOrientationChanged(orientation: Int) {
                 findViewById<RotateLayout>(R.id.rotateLayout).setOrientation(orientation)
-                findViewById<RotateImageView>(R.id.rotateLayout2).setOrientation(orientation)
+                findViewById<RotateImageView>(R.id.rotateImageView).setOrientation(orientation)
             }
         }
     }
