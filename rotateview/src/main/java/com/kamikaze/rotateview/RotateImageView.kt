@@ -13,6 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * Changes
+ *
+ * - The original file was changed from Java to Kotlin.
+ * - Refactored code
+ */
+
 package com.kamikaze.rotateview
 
 import android.content.Context
