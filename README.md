@@ -3,6 +3,12 @@
 This is an Android library that provides a rotating View.
 You can use it when you want to rotate only a part of the View instead of the whole screen.
 
+## Demo
+A demo of rotating the terminal and rotating some Views is shown below. The left side is a rotation without animation and the right side is a rotation with animation.
+
+<img src="https://user-images.githubusercontent.com/33488934/101191976-bdfa6080-369d-11eb-967d-12e088a4d4fa.gif" width="200" />
+
+(The animation is not smooth due to rough sampling, but it actually animates smoothly.)
 
 
 ## Setup
